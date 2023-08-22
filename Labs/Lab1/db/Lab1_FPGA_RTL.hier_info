@@ -1,0 +1,35 @@
+|Lab1_FPGA_RTL
+fpga_clk_50 => blink.CLK
+fpga_clk_50 => counter[0].CLK
+fpga_clk_50 => counter[1].CLK
+fpga_clk_50 => counter[2].CLK
+fpga_clk_50 => counter[3].CLK
+fpga_clk_50 => counter[4].CLK
+fpga_clk_50 => counter[5].CLK
+fpga_clk_50 => counter[6].CLK
+fpga_clk_50 => counter[7].CLK
+fpga_clk_50 => counter[8].CLK
+fpga_clk_50 => counter[9].CLK
+fpga_clk_50 => counter[10].CLK
+fpga_clk_50 => counter[11].CLK
+fpga_clk_50 => counter[12].CLK
+fpga_clk_50 => counter[13].CLK
+fpga_clk_50 => counter[14].CLK
+fpga_clk_50 => counter[15].CLK
+fpga_clk_50 => counter[16].CLK
+fpga_clk_50 => counter[17].CLK
+fpga_clk_50 => counter[18].CLK
+fpga_clk_50 => counter[19].CLK
+fpga_clk_50 => counter[20].CLK
+fpga_clk_50 => counter[21].CLK
+fpga_clk_50 => counter[22].CLK
+fpga_clk_50 => counter[23].CLK
+fpga_clk_50 => counter[24].CLK
+fpga_led_pio[0] << blink.DB_MAX_OUTPUT_PORT_TYPE
+fpga_led_pio[1] << blink.DB_MAX_OUTPUT_PORT_TYPE
+fpga_led_pio[2] << blink.DB_MAX_OUTPUT_PORT_TYPE
+fpga_led_pio[3] << blink.DB_MAX_OUTPUT_PORT_TYPE
+fpga_led_pio[4] << blink.DB_MAX_OUTPUT_PORT_TYPE
+fpga_led_pio[5] << blink.DB_MAX_OUTPUT_PORT_TYPE
+
+
