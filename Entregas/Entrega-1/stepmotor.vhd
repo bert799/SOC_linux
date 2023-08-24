@@ -29,7 +29,7 @@ architecture rtl of stepmotor is
    SIGNAL state  : STATE_TYPE := s0;
    signal enable : std_logic  := '0';
    signal topCounter : integer range 0 to 50000000;
-	signal maxSteps : integer range 0 to 255;
+	signal maxSteps : integer range 0 to 200000000;
   
 begin
 
@@ -89,26 +89,32 @@ begin
 					 100000 when vel = "11" else
                   100000;
 
-  maxSteps <= 200;						
+  maxSteps <= 200000000;						
 						
   process(clk, en, dir, maxSteps)
+	 variable tempMaxCounter : integer range 0 to 50000000 := 10000000;
     variable counter : integer range 0 to 50000000 := 0;
-	 variable steps : integer range 0 to 255 := 0;
+	 variable steps : integer range 0 to 20000 := 0;
   begin
-   if (en = '1' and steps <= maxSteps) then
-    if (rising_edge(clk)) then
-      if (counter < topCounter) then
+   if (en = '1') then
+    if (rising_edge(clk) and steps <= maxSteps) then
+      if (counter < tempMaxCounter) then
         counter := counter + 1;
         enable  <= '0';
       else
         counter := 0;
-		  steps := steps + 1;
         enable  <= '1';
+		  if tempMaxCounter >= topcounter then
+			tempMaxCounter := tempMaxCounter - 100000;
+		  else 
+		   steps := steps + 1;
+		  end if;
       end if;
     end if;
 	else 
 	 if en = '0' then
 		steps := 0;
+		tempMaxCounter := 10000000;
 	 end if;
 	end if;
   end process;
