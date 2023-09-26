@@ -1,0 +1,1 @@
+killall hps_gpio || echo "Process was not running." && ./hps_gpio
