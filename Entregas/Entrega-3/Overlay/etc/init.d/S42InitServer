@@ -1,0 +1,12 @@
+#!/bin/bash
+
+case "$1" in
+start)
+    printf "Starting Server: "
+    /usr/bin/python3 /root/app.py &
+    ;; 
+*)
+    exit 1
+    ;;
+esac
+
